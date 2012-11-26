@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>AJAX content using jQuery, history API with support for HTTPs</title>
+	<link href="assets/css/style.css" media="all" type="text/css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="assets/js/history.jquery.js"></script>
+	<script src="assets/js/site.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>AJAX content using jQuery, the history API and support for https</h1>	
+		<cite>Author: David Heward | <a href="http://davidheward.com">http://davidheward.com</a></cite>
+		<ul class="content_links">
+			<li><a href="/historyapi/pages/content_page_1.html">Content page 1</a></li>
+			<li><a href="/historyapi/pages/content_page_2.html">Content page 2</a></li>
+			<li><a href="/historyapi/pages/content_page_3.html">Content page 3</a></li>
+			<li><a href="/historyapi/pages/content_page_4.html">Content page 4</a></li>
+			<li><a href="/historyapi/pages/content_page_5.html">Content page 5</a></li>
+			<li><a href="https://localhost/historyapi/index.html">External HTTPS link</a></li>
+		</ul>
+		<div id="content">
+			<p>Content within this box is replaced with content from supporting pages using javascript and AJAX.
+		</div>	
+		<div id="current">...</div>	
+		<div id="page">
+			<h2>Pros and cons of this approach on a website like the <a href="http://www.metro.co.uk">metro.co.uk</a></h2>
+			<strong>Pros</strong>
+			<p>All pros assume good implementation of the technique demo'd above.</p>
+			<ul>
+				<li>Potentially a better browsing experience to the user. Fast and responsive UI.</li>
+				<li>Reduced server latency/load (Only content to be updated is requested and transferred).</li>
+				<li>Reduced bandwidth</li>
+				<li>History API allows enhanced browsing and functional compatibility with modern browsers</li>
+				<li>It allows more creative and flexible UIs but still keeping them semantic (which is always good)</li>
+			</ul>
+			<strong>Cons</strong>
+			<ul>
+				<li>Much more difficult to implement good SEO campaigns.</li>
+				<li>Heavy dependancy on javascript - user could have it disabled.</li>
+				<li>If poorly implemented can have a negative effect on users E.G no back button support etc</li>
+			</ul>
+			<p>In my opinion usage of the above technique on a website like the Metro should be kept partial, perhaps consider initially only using on heavy load pages. Splash and landing pages which pull in content from various sources both internally and externally are more suited to such implementations. I believe these pages to serve a different purpose to that of perhaps a single article page. At this level we are trying to engage the user and help them find something interesting - in most cases by showing highlights of interesting and popular content from within the site. For a splash/landing page which has such frequently changing content, SEO may not be the highest priority (or simply cannot be) and gains will be won and lost on a regular basis depending on the relevancy of the popular content pulled through. Where as providing a compelling and interesting user interface which is intuitive and engaging, is paramount. </p>
+				
+				<p>Before implementing any such functionality I would strongly advise analysing the benefits to the user, rather than thinking too much about several of the smaller improvements it may make to speed/latency. Prototyping splash pages to test engagement levels before role outs to a wider audience should also be considered here.</p>
+		</div>
+	</div>
+</body>
+</html>
